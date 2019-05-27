@@ -35,7 +35,6 @@ class MySpider(scrapy.Spider):
 			
 		if next_page_id is not final: 
 			next_page=response.urljoin(next_page_id)
-			#next_page=next_page_id
 			yield scrapy.Request(next_page,callback=self.parse)	
 				
 
